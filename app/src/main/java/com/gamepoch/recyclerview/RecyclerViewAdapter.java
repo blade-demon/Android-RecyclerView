@@ -1,6 +1,7 @@
 package com.gamepoch.recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -55,7 +56,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + mImageNames.get(position));
 
-                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+//              Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+                mContext.startActivity(new Intent(mContext, UserMainActivity.class));
             }
         });
     }
